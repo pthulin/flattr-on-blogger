@@ -18,7 +18,7 @@ if (pos) {
 
 var main_button = document.getElementById("main_flattr");
 main_button.className = "FlattrButton";
-main_button.href = window.location.hostname;
+main_button.href = 'http://' + window.location.hostname + '/';
 if(document.querySelectorAll){
 	var entries = document.querySelectorAll('.hentry');
 	if (entries.length == 1 ) { // Single post page. 
