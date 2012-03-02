@@ -20,7 +20,7 @@ if(empty($everywhere)) {
 $script =<<<EOT
 <script type='text/javascript' src='http://api.flattr.com/js/0.6/load.js?uid=$username'> </script>
 <div style="text-align:center;"><a id="main_flattr" class="FlattrButton" style="display:none;" href=""></a></div>
-<script type='text/javascript' src='http://melpomene.github.com/Flattr-on-blogger/flattrbutton.js?compact=$compact&everywhere=$everywhere'></script>
+<script type='text/javascript' src='http://tools.flattr.net/blogger/flattrbutton.js?compact=$compact&everywhere=$everywhere'></script>
 EOT;
 ?>
 </head>
