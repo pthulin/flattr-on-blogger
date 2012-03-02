@@ -23,11 +23,13 @@ if(document.querySelectorAll){
 	var entries = document.querySelectorAll('.hentry');
 	if (entries.length == 1 ) { // Single post page. 
 		var footer = entries[0].querySelectorAll('.post-footer');
+		var title = document.querySelectorAll('.entry-title')[0].innerHTML;
 		var url = window.location.href;
 		var button =  document.createElement("a");
 		button.className = "FlattrButton";
 		button.style = "display:none";
 		button.href= url;
+		button.title = title;
 		if(compact == "true") {
 			button.rev="flattr;button:compact;";
 		}
@@ -36,10 +38,12 @@ if(document.querySelectorAll){
 	}else if(everywhere=="true"){
 		for (var i = 0; i < entries.length; i ++) {
 			var url = entries[i].querySelectorAll(".entry-title>a[href]")[0].href;
+			var title = entries[i].querySelectorAll(".entry-title>a[href]")[0].innerHTML;
 			var button =  document.createElement("a");
 			button.className = "FlattrButton";
 			button.style = "display:none";
 			button.href= url;
+			button.title = title;
 			if(compact == "true") {
 				button.rev="flattr;button:compact;";
 			}
